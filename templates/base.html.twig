@@ -23,6 +23,14 @@
                                 </a>
                             </li>
                         </ul>
+
+                        {% if app.user %}
+                            <a href="{{ path('security_logout') }}" class=" btn btn-success text-decoration-none">Deconnexion</a>
+                        {% else %}
+                            <a href="{{ path('security_register') }}" class="btn btn-success text-decoration-none m-2">Inscription</a>
+                            <a href="{{ path('security_login') }}" class="btn btn-success text-decoration-none m-2">Connexion</a>
+                        {% endif %}
+
                     </div>
                 </div>
             </nav>
